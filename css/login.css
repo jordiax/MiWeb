@@ -1,0 +1,25 @@
+form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 35%;
+    margin-top: 1%;
+}
+form div label{
+    display: inline-block;
+    min-width: 80px;
+}
+form div input{
+    display: inline-block;
+    margin-bottom: 10px;
+    min-width: 200px;
+}
+.lboton{
+    min-width: 50px;
+}
+.botones{
+    display: flex;
+    flex-direction: row;
+}
+#cancelar{
+    margin-left: 5px;
+}
