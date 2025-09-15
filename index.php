@@ -1,3 +1,4 @@
+<?php require 'templates/template.php'; ?>
 <!DOCTYPE html>
 <html lang="es">
 	<head>
@@ -37,11 +38,7 @@
 					</form>
 				</div>
 				<div class="navegacion menu flex2">
-					<menu class="menu">
-						<li><a href="index.php" class="item-menu actual">Inicio</a></li>
-						<li><a href="contacto.php" class="item-menu no-actual">Contacto</a></li>
-						<li><a href="galeria.php" class="item-menu no-actual">Galería</a></li>
-					</menu>
+					<?php menu('ini'); ?>
 				</div>
 			</div>
 		</header>
