@@ -9,39 +9,12 @@
 		<script src="js/index.js"></script>
 		<title>Página principal</title>
 	</head>
-	<body>
-		<header id="cabecera">
-			<div class="flex-container">
-				<div class='flex2 cabecera'>
-					<figure><img src="img/logo-transparent.png" alt="logo" id="logo"></figure>
-				</div>
-				<div class='flex2 cabecera'>
-					<h1>Título</h1>
-				</div>
-				<div id="dLogin" class='flex2 cabecera'>				
-					<a href="login.php">Login</a>
-					<figure><img src="img/login.png"></figure>
-					<span> / </span>
-					<a href="registro.php">Registro</a>
-					<figure><img src="img/registro.png"></figure>
-				</div>
-			</div>
-			<div class="flex-container">
-				<div class="navegacion migas flex2">
-					<span>Inicio</span>
-				</div>
-				<div class="navegacion flex2" id="dBuscar">
-					<form action="/search" id="fBuscar">
-					  <!-- <label for="iBuscar">Buscar:</label> -->
-					  <input type="search" id="iBuscar" name="b" placeholder="Ingrese su búsqueda">
-					  <img src="img/lupa.png" alt="Buscar" class="buscar" onclick="buscar()">
-					</form>
-				</div>
-				<div class="navegacion menu flex2">
-					<?php menu('ini'); ?>
-				</div>
-			</div>
-		</header>
+	<body>		
+		<?php 
+		//<HEADER>
+			cabecera('Mundo Scalextric', 'Página sobre Scalextric', 'ini'); 
+		//</HEADER>
+		?>
 		<h1>Inicio</h1>
 		<div id="cookies" class="modal">
 			<div class="contenido-modal">
@@ -55,6 +28,30 @@
 				<output id="mensaje"></output>
 			</div>
 		</div>
+		<br>
+		<p class="parrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur consectetur purus, aliquam viverra augue blandit non. Mauris aliquam faucibus tellus, vitae euismod mi vehicula a. Cras in placerat tortor, sed convallis nisi. Donec gravida nisl facilisis nunc aliquet pharetra. Donec vitae augue sit amet diam cursus semper sit amet malesuada justo. Suspendisse pulvinar maximus quam vel pharetra. Ut condimentum nisl ac dui auctor commodo. Aliquam sollicitudin mi ac congue tincidunt.</p>
+		<br>
+		<figure class="figura-parrafo">
+			<img src="img/galeria/rally/lancia-stratos.png" alt="Lancia Stratos SRC" class="imagen-parrafo">
+		</figure>
+		<br>
+		<div class="flex-container">
+			<div class="flex2 parrafo">
+				<p>Maecenas fringilla ornare libero a luctus. Integer ultricies venenatis magna sit amet pharetra. Morbi sit amet ante eu odio molestie mattis. Duis elementum eros eget massa iaculis, non finibus erat iaculis. Quisque ante ante, hendrerit a tellus in, vulputate cursus tortor. Nam convallis lorem pretium aliquet vulputate. Curabitur sit amet leo quis augue sollicitudin commodo non nec orci.</p>
+			</div>
+			<div class="flex2 parrafo">
+				<p>Donec id vestibulum justo. Phasellus vel rutrum velit. Phasellus in interdum est, varius congue ante. Nullam ullamcorper rutrum leo, ac vehicula felis pulvinar sit amet. Donec et elit luctus, pellentesque enim id, congue dolor. Nulla luctus ligula neque, non posuere dui imperdiet nec. Donec pellentesque purus a libero ornare pretium. Fusce et luctus augue, in malesuada neque. Etiam sit amet est non purus fringilla iaculis. Quisque rutrum nisi quam, et venenatis elit fringilla et. Cras eget neque nec diam interdum finibus. </p>
+			</div>
+		</div>
+		<div class="flex-container">
+			<div class="flex2 parrafo">
+				<p>Curabitur dictum gravida luctus. Curabitur rutrum magna vel rutrum rutrum. Proin sodales dolor quis lacus lacinia tincidunt ut eu dui. Phasellus id lorem quam. Nunc viverra vel orci id sollicitudin. Nunc ut tristique justo. Nam quam quam, tincidunt sed elit ut, viverra ullamcorper elit. Nunc ultrices odio nec nulla efficitur condimentum. Integer sed magna in tortor luctus imperdiet ut non erat. </p>
+			</div>
+			<div class="flex2 parrafo">
+				<p>Etiam congue tristique nibh, a condimentum tortor ultrices vitae. Nam quis nunc magna. In nec mauris eget arcu euismod posuere. Nulla est ipsum, eleifend egestas dui vel, eleifend accumsan nisl. Nunc non nulla odio. Nunc blandit et nisl eget efficitur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed dapibus ipsum sed felis ullamcorper pellentesque. Vestibulum id odio quis urna rhoncus ultrices.</p>
+			</div>
+		</div>
+		<br>
 		<script>
 			function buscar()
 			{
@@ -62,4 +59,9 @@
 			}
 		</script>
 	</body>
+	<?php
+	//<FOOTER>
+		piePagina("Alex Jordi");
+	//</FOOTER>
+	?>
 </html>

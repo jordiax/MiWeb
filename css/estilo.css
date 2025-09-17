@@ -24,6 +24,14 @@
 .flex8{flex: 8}
 
 /*HEADER*/
+.titulo-head{
+	color: yellow;
+	font-size: 2.5em;
+}
+.subtitulo-head{
+	color: orange;
+	font-size: 2em;
+}
 #logo{
 	max-width: 30%;
 }
@@ -127,7 +135,21 @@
 #mensaje {
 	color: red;
 }
-
+.parrafo{
+	text-indent: 1em;
+	padding-left: 3px;
+	margin-left: 3px;
+	margin-bottom: 5px;
+}
+.figura-parrafo{
+	display: flex;
+	justify-content: center;
+}
+.imagen-parrafo{
+	display: inline-block;	
+	transform:scale(0.75);
+	height: auto;
+}
 /*REGISTRO*/
 .dRegistro{
 	margin-top: 2%;
