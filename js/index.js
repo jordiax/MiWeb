@@ -16,11 +16,12 @@ function evaluar()
 
 	if(aceptar.checked)
 	{
+		document.cookie = 'aceptar=si; expires=' + new Date('2028-01-01');
 		cookies.remove();
 	}
 	else
 	{
-		mensaje.innerHTML = "";
+		mensaje.innerHTML = '';
 		mensaje.innerHTML = "Debe marcar el check para aceptar las cookies.";
 	}
 }

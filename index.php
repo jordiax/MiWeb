@@ -20,6 +20,10 @@
 		//</HEADER>
 		?>
 		<h1>Inicio</h1>
+		<?php
+			if(empty($_COOKIE['aceptar']))
+			{
+		?>
 		<div id="cookies" class="modal">
 			<div class="contenido-modal">
 				<span>Debes aceptar las cookies para poder acceder a este sitio web.</span>
@@ -32,6 +36,7 @@
 				<output id="mensaje"></output>
 			</div>
 		</div>
+		<?php }?>
 		<br>
 		<p class="parrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur consectetur purus, aliquam viverra augue blandit non. Mauris aliquam faucibus tellus, vitae euismod mi vehicula a. Cras in placerat tortor, sed convallis nisi. Donec gravida nisl facilisis nunc aliquet pharetra. Donec vitae augue sit amet diam cursus semper sit amet malesuada justo. Suspendisse pulvinar maximus quam vel pharetra. Ut condimentum nisl ac dui auctor commodo. Aliquam sollicitudin mi ac congue tincidunt.</p>
 		<br>
