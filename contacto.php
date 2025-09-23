@@ -16,7 +16,22 @@
 		//</HEADER>
 		?>
 		<h1>Contacto</h1>
-
+		<div class="flex-container">
+            <form class="flex4" method="post" action="enviar.php">
+                <label for="emailTo">Email:</label>
+                <input type="input"  name="emailTo" required>
+				<br>
+				<label for="mensaje">Descripción</label>
+				<input type="input"  name="mensaje" required>
+				<br>
+				<label for="texto" class="texto">Texto:</label>
+				<textarea rows = "5" cols = "60" name = "texto" placeholder="Escribe tu mensaje."></textarea>
+                <div>
+                    <input type="submit" value="Enviar" name="enviar">
+                    <input type="reset" value="Reset">
+                </div>
+            </form>
+        </div>
 		<script>
 			function buscar()
 			{

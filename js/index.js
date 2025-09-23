@@ -3,7 +3,7 @@ window.addEventListener('load', function(){
 	document.body.onkeyup = function(ev){
 		if(ev.key.toUpperCase()=='Q' && ev.shiftKey)
 		{
-			window.location.href = './contacto.html';
+			window.location.href = './contacto.php';
 		}
 	}
 });

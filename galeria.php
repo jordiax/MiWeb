@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="MF0491: prueba práctica de la parte cliente.">
 		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<link rel="stylesheet" type="text/css" href="css/galeria.css">
 		<script src="js/galeria.js"></script>
 		<title>Página principal</title>
 	</head>
@@ -15,12 +16,57 @@
 			cabecera('Mundo Scalextric', 'Página sobre Scalextric', 'gal'); 
 		//</HEADER>
 		?>
-		<h1>Galería</h1>
-		<a href="./imagenes.php">A imágenes</a>
+		<h1>Galería de imágenes</h1>
 		<br>
-		<a href="./videos.php">A vídeos</a>
-		<br>
-		<a href="./audios.php">A audios</a>
+		<h2>Coches de F1</h2>
+		<div id="galeria">
+			<div class="flex-container galeria">
+			<?php
+				$directorio = 'img/galeria/f1';
+				$filtro = '/\.(jpe?g|png)$/i';
+				$archivos = scandir($directorio);
+
+				$filtrados=[];
+				foreach($archivos as $archivo)
+					if(preg_match($filtro, $archivo))
+						$filtrados[]=$archivo;
+				sort($filtrados);
+
+				foreach($filtrados as $fichero)
+				{?>
+				<figure class="flex4 marco">
+					<img class="cuadrar-imagen" src = '<?="$directorio/$fichero"?>'>
+					<figcaption><?= strtoupper(str_replace('-', ' ', substr($fichero, 0, -4))); ?></figcaption>
+				</figure>
+			<?php
+				}
+			?>
+			</div>
+			<br>
+			<h2>Coches de Rally</h2>
+			<div class="flex-container galeria">				
+				<?php
+				$directorio = 'img/galeria/rally';
+				$filtro = '/\.jpe?g$/i';
+				$archivos = scandir($directorio);
+
+				$filtrados=[];
+				foreach($archivos as $archivo)
+					if(preg_match($filtro, $archivo))
+						$filtrados[]=$archivo;
+				sort($filtrados);
+
+				foreach($filtrados as $fichero)
+				{?>
+				<figure class="flex4 marco">
+					<img class="cuadrar-imagen" src = '<?="$directorio/$fichero"?>'>
+					<figcaption><?= strtoupper(str_replace('-', ' ', substr($fichero, 0, -4))); ?></figcaption>
+				</figure>
+			<?php
+				}
+			?>
+			</div>
+		</div>
 		<script>
 			function buscar()
 			{

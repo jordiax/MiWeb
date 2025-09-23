@@ -1,4 +1,8 @@
-<?php require 'templates/template.php'; ?>
+<?php 
+	require 'templates/template.php'; 
+	include 'config/config.php';
+	include 'library/autoload.php';
+?>
 <!DOCTYPE html>
 <html lang="es">
 	<head>
