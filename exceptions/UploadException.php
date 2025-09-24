@@ -9,4 +9,4 @@
  * @author Robert Sallent <robertsallent@gmail.com>
  */
 
-class UploadException extends FastLightException{}
+class UploadException extends Exception{}

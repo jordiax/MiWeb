@@ -1,4 +1,5 @@
 <?php
+
 function cabecera(string $titulo='', string $subtitulo = '', $pagina)
 {
     ?>
@@ -11,13 +12,28 @@ function cabecera(string $titulo='', string $subtitulo = '', $pagina)
                 <h1 class="titulo-head"><?= $titulo ?></h1>
                 <h2 class="subtitulo-head"><?= $subtitulo ?></h2>
             </div>
+            <?php
+                if(Session::has('user'))
+                {
+            ?>
             <div id="dLogin" class='flex2 cabecera'>				
-                <a href="login.php">Login</a>
+                <p><?= Session::get('user')->userName?></p>
+                <span> / </span>
+                <a href="scripts/sendLogin.php?logout">Logout</a>                
+            </div>
+            <?php
+                }
+                else
+                {
+            ?>
+            <div id="dLogin" class='flex2 cabecera'>				
+                <a href="login.php" name="registrarse">Login</a>
                 <figure><img src="img/login.png"></figure>
                 <span> / </span>
                 <a href="registro.php">Registro</a>
                 <figure><img src="img/registro.png"></figure>
             </div>
+            <?php } ?>
         </div>
         <div class="flex-container">
             <div class="navegacion migas flex2">

@@ -1,4 +1,9 @@
-<?php require 'templates/template.php'; ?>
+<?php 
+	require 'templates/template.php'; 
+	include 'config/config.php';
+	include 'library/autoload.php';
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 	<head>
@@ -41,7 +46,17 @@
 			<?php
 				}
 			?>
+			 <?php
+                if(Session::has('user'))
+                {
+            ?>
 			</div>
+			<br>
+			<form class="flex4" method="post" action="formularioGaleria.php">
+				<input type="submit" value="Subir imágenes" name="uploadF" class="item-menu no-actual">
+			</form>
+			<br>
+			<?php } ?>			
 			<br>
 			<h2>Coches de Rally</h2>
 			<div class="flex-container galeria">				
@@ -66,6 +81,11 @@
 				}
 			?>
 			</div>
+			<br>
+			<form class="flex4" method="post" action="formularioGaleria.php">
+				<input type="submit" value="Subir imágenes" name="uploadR" class="item-menu no-actual">
+			</form>
+			<br>
 		</div>
 		<script>
 			function buscar()
@@ -74,4 +94,10 @@
 			}
 		</script>
 	</body>
+	
+	<?php
+	//<FOOTER>
+		piePagina("Alex Jordi");
+	//</FOOTER>
+	?>
 </html>

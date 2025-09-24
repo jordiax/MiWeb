@@ -1,3 +1,9 @@
+<?php 
+	require 'templates/template.php'; 
+	include 'config/config.php';
+	include 'library/autoload.php';
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 	<head>
@@ -9,38 +15,11 @@
 		<title>Página de registro</title>
 	</head>
 	<body>
-        <header id="cabecera">
-			<div class="flex-container">
-				<div class='flex2 cabecera'>
-					<figure><img src="img/logo-transparent.png" alt="logo" id="logo"></figure>
-				</div>
-				<div class='flex2 cabecera'>
-					<h1>Título</h1>
-				</div>
-				<div id="dLogin" class='flex2 cabecera'>				
-					<a href="login.php">Login</a>
-					<figure><img src="img/login.png"></figure>
-					<span> / </span>
-					<a href="#">Registro</a>
-					<figure><img src="img/registro.png"></figure>
-				</div>
-			</div>
-			<div class="flex-container">
-				<div class="navegacion migas flex2">
-					<a href="./index.php" class="migas">Inicio</a><span> / Registro</span>
-				</div>
-				<div class="navegacion flex2" id="dBuscar">
-					<form action="/search" id="fBuscar">
-					  <!-- <label for="iBuscar">Buscar:</label> -->
-					  <input type="search" id="iBuscar" name="b" placeholder="Ingrese su búsqueda">
-					  <img src="img/lupa.png" alt="Buscar" class="buscar" onclick="buscar()">
-					</form>
-				</div>
-				<div class="navegacion menu flex2">
-					<?php menu('ini'); ?>
-				</div>
-			</div>
-		</header>
+        <?php 
+		//<HEADER>
+			cabecera('Mundo Scalextric', 'Página sobre Scalextric', 'ini'); 
+		//</HEADER>
+		?>
         <form class="dRegistro">
             <label class="lRegistro">Nombre:</label>
             <input type="text" name="nombre" class="mayusculas">
