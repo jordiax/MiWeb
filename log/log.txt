@@ -5,3 +5,8 @@
 Éxito en la operación, fichero subido a ../img/galeria/rally/img_68d3d8cd8e1766.91669618.jpg
 Array - Éxito en la operación, fichero subido a ../img/galeria/rally/img_68d3d9802484c1.92503512.png
 2025-09-24 13:46:56 - Éxito en la operación, fichero subido a ../img/galeria/rally/img_68d3da309380b1.63820083.png
+2025-09-25 10:59:41 - Éxito en la operación, fichero subido a ../img/galeria/rally/img_68d5047de20a36.85652902.png
+2025-09-25 11:00:22 - Éxito en la operación, fichero subido a ../img/galeria/rally/img_68d504a623aa96.08823735.jpg
+2025-09-25 11:09:00 - Error: El fichero no es de tipo image/*
+2025-09-25 11:31:06 - Éxito en la operación, fichero subido a ../img/galeria/f1/img_68d50bdac79e58.00489318.jpg
+2025-09-25 11:31:39 - Error: El fichero no es de tipo image/*
