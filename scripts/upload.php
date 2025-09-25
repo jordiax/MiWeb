@@ -18,12 +18,12 @@
 
         $fichero = fopen("../log/log.txt", 'a');
 
-		fwrite($fichero, $log . PHP_EOL);
+		fwrite($fichero, $log.PHP_EOL);
 		fclose($fichero);
     }
     catch (UploadException $e)
     {
-        $log = date("Y-m-d H:i:s")." - Error: ".$e->getMessage();
+        $log = date("Y-m-d H:i:s")." - Error: ".$e->getMessage().PHP_EOL;
 
         echo $log;
 

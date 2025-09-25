@@ -23,8 +23,8 @@
 		?>
 		<h1>Galería de imágenes</h1>
 		<br>
-		<h2>Coches de F1</h2>
 		<div id="galeria">
+			<h2>Coches de F1</h2>
 			<div class="flex-container galeria">
 			<?php
 				$directorio = 'img/galeria/f1';
@@ -43,10 +43,8 @@
 					<img class="cuadrar-imagen" src = '<?="$directorio/$fichero"?>'>
 					<figcaption><?= strtoupper(str_replace('-', ' ', substr($fichero, 0, -4))); ?></figcaption>
 				</figure>
-			<?php
-				}
-			?>
-			 <?php
+			<?php 
+				} 
                 if(Session::has('user'))
                 {
             ?>
@@ -57,7 +55,7 @@
 			</form>
 			<br>
 			<?php } ?>			
-			<br>
+			
 			<h2>Coches de Rally</h2>
 			<div class="flex-container galeria">				
 				<?php
@@ -79,13 +77,16 @@
 				</figure>
 			<?php
 				}
-			?>
+			if(Session::has('user'))
+                {
+            ?>
 			</div>
 			<br>
 			<form class="flex4" method="post" action="formularioGaleria.php">
 				<input type="submit" value="Subir imágenes" name="uploadR" class="item-menu no-actual">
 			</form>
 			<br>
+			<?php } ?>
 		</div>
 		<script>
 			function buscar()

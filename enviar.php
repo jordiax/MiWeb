@@ -1,6 +1,7 @@
 <?php
     include 'config/config.php';
 	include 'library/autoload.php';
+    session_start();
 
     $to = 'bibec56551@dotxan.com';
     $from = 'no-reply@test.es';
